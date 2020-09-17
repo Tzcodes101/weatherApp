@@ -9,8 +9,8 @@ This is an interactive weather application, with a visually appealing UI. Using 
 5. The UV index will change color display depending on severity.
 6. The five-day forecast displays the date, weather-icon, temperature, and humidity for each day.
 
-A link to the live site is here: 
+A link to the live site is here: https://tzcodes101.github.io/weatherApp/
 
-A link to the repo is here: 
+A link to the repo is here: https://github.com/Tzcodes101/weatherApp
 
 A screenshot of the application can be found in the "App Image" folder.
