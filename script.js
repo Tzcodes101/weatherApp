@@ -68,7 +68,7 @@ $(document).ready(function () {
                 var temp = $("<p>").addClass("card-text").text("Temperature: " + tempF + " °F");
 
                 //create img icon
-                var img = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png").attr("alt", "weather-icon");
+                var img = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png").attr("alt", "weather-icon");
                 
 
                 //combine then add to page
@@ -90,7 +90,7 @@ $(document).ready(function () {
     function obtainForecast(searchValue) {
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5eb9383515eca97bbbb3054d2a28b4fa",
+            url: "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5eb9383515eca97bbbb3054d2a28b4fa",
             dataType: "json",
             success: function (data) {
 
@@ -108,7 +108,7 @@ $(document).ready(function () {
                         var card = $("<div>").addClass("card bg-primary text-white");
                         var body = $("<div>").addClass("card-body p-2");
                         var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
-                        var img = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png").attr("alt", "weather-icon");
+                        var img = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png").attr("alt", "weather-icon");
 
                         //convert from kelvin to F    
                         var tempK = data.list[i].main.temp_max;
@@ -133,7 +133,7 @@ $(document).ready(function () {
         //send ajax request
         $.ajax({
             type: "GET",
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=5eb9383515eca97bbbb3054d2a28b4fa&lat=" + lat + "&lon=" + lon,
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=5eb9383515eca97bbbb3054d2a28b4fa&lat=" + lat + "&lon=" + lon,
             dataType: "json",
             success: function (data) {
                 var uvIndex = $("<p>").text("UV Index: ");
